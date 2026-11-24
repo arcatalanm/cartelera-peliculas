@@ -2,12 +2,12 @@
 # User data para una instancia nueva de Amazon Linux 2023.
 # Completar los valores REEMPLAZAR antes de crear la plantilla de lanzamiento.
 # El repositorio debe incluir frontend/package-lock.json y ser accesible por HTTPS.
-# Las tablas de sql/schema.sql se crean una sola vez en RDS, antes del lanzamiento.
+# RDS se inicializa automaticamente mediante deploy/init_database.py.
 set -Eeuo pipefail
 exec > >(tee -a /var/log/cinego-install.log) 2>&1
 trap 'echo "Error en la linea $LINENO. Revisar /var/log/cinego-install.log"' ERR
 
-REPO_URL='REEMPLAZAR_URL_HTTPS_DEL_REPOSITORIO'
+REPO_URL='https://github.com/arcatalanm/cartelera-peliculas'
 REPO_REF='main'
 APP_DIR=/opt/cartelera-peliculas
 
@@ -40,6 +40,10 @@ if grep -q 'REEMPLAZAR_' "$APP_DIR/backend/.env"; then
     echo 'Completar las variables de RDS en el script antes de lanzarlo.'
     exit 1
 fi
+
+# Inicializar RDS desde esta instancia, antes de iniciar la aplicacion.
+# El bloqueo en MySQL coordina lanzamientos simultaneos y evita repetir las semillas.
+"$APP_DIR/.venv/bin/python" "$APP_DIR/deploy/init_database.py"
 
 cd "$APP_DIR/frontend"
 # /api se resuelve en Nginx, dentro del mismo origen del frontend.
