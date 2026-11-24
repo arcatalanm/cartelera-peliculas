@@ -96,7 +96,7 @@ INSERT INTO Peliculas (
     'Con la identidad de Spider-Man ahora revelada, Peter Parker pide ayuda al Doctor Strange, desatando una crisis en el multiverso.', 
     'Por primera vez en la historia cinematográfica de Spider-Man, nuestro héroe vecino es desenmascarado y ya no puede separar su vida normal de los altos riesgos de ser un superhéroe. Cuando pide ayuda a Doctor Strange, un hechizo fallido abre la puerta a peligrosos villanos de otros universos.', 
     TRUE, 
-    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/spiderman-nwh.webp', 
+    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/no way home.webp', 
     6
 ),
 (
@@ -120,7 +120,7 @@ INSERT INTO Peliculas (
     'La historia real de Desmond Doss, médico del ejército estadounidense que salvó a 75 hombres en Okinawa sin disparar una sola bala.', 
     'Ambientada en la Segunda Guerra Mundial, narra la extraordinaria historia del objetor de conciencia Desmond Doss, quien en la sangrienta batalla de Okinawa se negó a portar o disparar un arma por sus convicciones, logrando evacuar él solo a decenas de soldados heridos bajo fuego enemigo.', 
     TRUE, 
-    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/hasta-el-ultimo-hombre.webp', 
+    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/hacksaw ridge.webp', 
     5
 ),
 (
@@ -132,7 +132,7 @@ INSERT INTO Peliculas (
     'Tras el desembarco de Normandía, un grupo de soldados estadounidenses se adentra tras las líneas enemigas para rescatar a un paracaidista.', 
     'Durante la invasión de Normandía en la Segunda Guerra Mundial, el capitán John Miller recibe la orden de liderar un escuadrón detrás de las líneas alemanas para encontrar y traer de vuelta a casa al soldado James Ryan, cuyos tres hermanos han muerto en combate.', 
     TRUE, 
-    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/rescatando-soldado-ryan.webp', 
+    'https://s3-cinego-acm.s3.us-east-1.amazonaws.com/media/saving private ryan.webp', 
     5
 ),
 (
